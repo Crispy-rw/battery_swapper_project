@@ -1,0 +1,61 @@
+{
+  "name": "template-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "npm run clean && babel src -d build",
+    "start": "npm run build && node --require babel-core/register --require babel-polyfill ./build/server.js",
+    "start:prod": "node --require babel-core/register --require babel-polyfill ./src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon --require babel-core/register --require babel-polyfill ./src/server.js"
+  },
+  "repository": {
+    "type": "node project",
+    "url": ""
+  },
+  "author": "Nshimyumukiza Christian",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "@google-cloud/logging-winston": "^4.0.4",
+    "babel-preset-env": "^1.7.0",
+    "bcrypt": "^5.0.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "exceljs": "^4.2.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "gps-distance": "0.0.4",
+    "helmet": "^4.1.1",
+    "ioredis": "^5.0.1",
+    "joi": "^17.2.1",
+    "joi-phone-number": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.4.13",
+    "rate-limiter-flexible": "^2.3.6",
+    "read-excel-file": "^5.0.0",
+    "redis": "^4.0.4",
+    "sequelize": "^6.3.5",
+    "sequelize-auto": "^0.7.5",
+    "throng": "^5.0.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.4",
+    "rimraf": "^2.7.1",
+    "sequelize-cli": "^6.2.0"
+  }
+}

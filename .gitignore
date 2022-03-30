@@ -1,0 +1,7 @@
+node_modules
+.history
+.vscode
+.env
+tmp/
+build/
+src/config/googleLogger.config.json
